@@ -1,0 +1,23 @@
+{
+  "name": "SJ Notes",
+  "short_name": "SJ Notes",
+  "description": "A comprehensive productivity app for managing notes, tasks, and goals",
+  "version": "1.1.0-beta",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#3B82F6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "lang": "en",
+  "scope": "/",
+  "prefer_related_applications": false
+}

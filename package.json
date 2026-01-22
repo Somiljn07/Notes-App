@@ -1,0 +1,45 @@
+{
+  "name": "sj-notes",
+  "version": "1.0.0",
+  "description": "A modern, full-stack personal productivity application built with React and FastAPI",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && uvicorn main:app --reload",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start:backend": "cd backend && uvicorn main:app",
+    "start:frontend": "cd frontend && npm run preview",
+    "install:all": "cd backend && pip install -r requirements.txt && cd ../frontend && npm install",
+    "clean": "cd frontend && rm -rf node_modules dist && cd ../backend && rm -rf __pycache__ *.db"
+  },
+  "keywords": [
+    "notes",
+    "todo",
+    "goals",
+    "productivity",
+    "react",
+    "fastapi",
+    "python",
+    "javascript",
+    "sqlite",
+    "tailwindcss"
+  ],
+  "author": "SJ Notes Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/sj-notes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/sj-notes/issues"
+  },
+  "homepage": "https://github.com/yourusername/sj-notes#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

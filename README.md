@@ -115,17 +115,22 @@ serve -s dist -l 5174
 ## 🖥️ Multi-Device Setup
 
 ### Setting Up on Second Laptop
-1. **Copy project folder** to new laptop
-2. **Install prerequisites** (Python, Node.js)
-3. **Run setup script**:
+1. **Clone repository**: `git clone https://github.com/Somiljn07/Notes-App.git`
+2. **Install prerequisites** (Python 3.8+, Node.js 16+)
+3. **Setup backend**:
    ```bash
-   # Windows
-   setup_second_laptop.bat
-   
-   # Mac/Linux
-   ./setup_second_laptop.sh
+   cd backend
+   python -m venv venv
+   venv\Scripts\activate
+   pip install -r requirements.txt
    ```
-4. **Start application** using provided scripts
+4. **Setup frontend**:
+   ```bash
+   cd frontend
+   npm install
+   npm install -g serve  # For production builds
+   ```
+5. **Start application** using the commands in Quick Start section
 
 Each laptop maintains independent data - perfect for work/personal separation.
 
@@ -186,12 +191,10 @@ sj-notes/
 │   │   ├── sw.js          # Service Worker
 │   │   └── manifest.json  # PWA Manifest
 │   └── package.json       # Node.js dependencies
-├── docs/
-│   ├── DAILY_USAGE_GUIDE.md
-│   ├── MULTI_LAPTOP_SETUP_GUIDE.md
-│   ├── OFFLINE_MODE_SETUP.md
-│   └── BETA_TESTING_CHECKLIST.md
-└── README.md
+├── CONTRIBUTING.md          # Contribution guidelines
+├── CHANGELOG.md            # Version history
+├── LICENSE                 # MIT License
+└── README.md              # This file
 ```
 
 ---
@@ -243,17 +246,22 @@ cp backend/sj_notes.db backup/   # Backup database
 
 ## 📞 Support & Documentation
 
-### Available Guides
-- **[Daily Usage Guide](DAILY_USAGE_GUIDE.md)** - How to use SJ Notes effectively
-- **[Multi-Laptop Setup](MULTI_LAPTOP_SETUP_GUIDE.md)** - Setup on multiple devices
-- **[Offline Mode Setup](OFFLINE_MODE_SETUP.md)** - Enable offline functionality
-- **[Beta Testing Checklist](BETA_TESTING_CHECKLIST.md)** - Systematic testing guide
+### Getting Help
+- **GitHub Issues**: Report bugs or request features
+- **Documentation**: All essential information is in this README
+- **Code Comments**: Detailed inline documentation in source code
 
 ### Troubleshooting
 - Check console for errors (F12 → Console)
 - Verify all dependencies installed
 - Ensure correct ports (5174 frontend, 8000 backend)
 - Clear browser cache if issues persist
+
+### Common Issues
+- **Port conflicts**: App will auto-use next available port (5175, 5176, etc.)
+- **Virtual environment**: Always activate with `venv\Scripts\activate`
+- **Database locked**: Stop backend and restart to auto-repair
+- **Module not found**: Ensure virtual environment is activated and dependencies installed
 
 ---
 

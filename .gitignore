@@ -28,6 +28,16 @@ ENV/
 env.bak/
 venv.bak/
 
+# Personal Documentation (Keep Local Only)
+DAILY_*.md
+KIRO_PROJECT_CONTEXT.md
+CODE_REVIEW_SUMMARY.md
+TECHNICAL_SUMMARY.md
+QUICK_START_REFERENCE.md
+OFFLINE_MODE_SETUP.md
+MULTI_LAPTOP_SETUP_GUIDE.md
+BETA_TESTING_CHECKLIST.md
+
 # Database
 *.db
 *.sqlite

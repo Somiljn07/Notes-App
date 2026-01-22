@@ -1,5 +1,7 @@
 # 📝 SJ Notes - Personal Productivity App
 
+> **Development Disclaimer**: This application was developed with assistance from AI (Kiro Assistant). The AI helped with code architecture, implementation, debugging, and documentation. While the core ideas, requirements, and testing were human-driven, significant portions of the codebase and documentation were generated or enhanced through AI collaboration.
+
 > **Version**: 1.1.0-beta | **Status**: Beta Testing Phase | **Build**: January 2026
 
 A comprehensive productivity application for managing notes, tasks, and goals with advanced features like drag & drop, auto-save, offline support, and keyboard shortcuts.

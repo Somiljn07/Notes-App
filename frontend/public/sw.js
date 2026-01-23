@@ -118,7 +118,7 @@ async function handleApiRequest(request) {
     }
     
     throw new Error('Network response not ok');
-  } catch (error) {
+  } catch {
     console.log('Service Worker: Network failed, trying cache for:', url.pathname);
     
     // Fall back to cache

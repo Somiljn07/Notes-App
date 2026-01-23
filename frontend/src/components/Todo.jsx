@@ -26,6 +26,15 @@ export default function Todo({ todos = [], setTodos, searchQuery = "", onNotify,
   const [activeFilter, setActiveFilter] = useState(DEFAULTS.FILTER);
   const [activeSort, setActiveSort] = useState(DEFAULTS.SORT);
 
+  /* ---------- HELPERS ---------- */
+  const normalizeTags = (value) => {
+    if (!value) return [];
+    if (Array.isArray(value)) return value;
+    if (typeof value === "string")
+      return value.split(",").map(t => t.trim()).filter(Boolean);
+    return [];
+  };
+
   // Auto-save for editing
   const { manualSave } = useAutoSave(
     editData,
@@ -54,15 +63,6 @@ export default function Todo({ todos = [], setTodos, searchQuery = "", onNotify,
       onNotify?.(`Moved task from position ${fromIndex + 1} to ${toIndex + 1}`);
     }
   );
-
-  /* ---------- HELPERS ---------- */
-  const normalizeTags = (value) => {
-    if (!value) return [];
-    if (Array.isArray(value)) return value;
-    if (typeof value === "string")
-      return value.split(",").map(t => t.trim()).filter(Boolean);
-    return [];
-  };
 
   /* ---------- CREATE ---------- */
   const addTask = async () => {

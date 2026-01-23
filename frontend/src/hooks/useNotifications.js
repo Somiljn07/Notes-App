@@ -4,6 +4,10 @@ import { NOTIFICATION_TYPES, UI_CONFIG } from '../constants';
 export const useNotifications = () => {
   const [notifications, setNotifications] = useState([]);
 
+  const removeNotification = useCallback((id) => {
+    setNotifications(prev => prev.filter(n => n.id !== id));
+  }, []);
+
   const addNotification = useCallback((message, type = NOTIFICATION_TYPES.INFO, duration = UI_CONFIG.NOTIFICATION_DURATION) => {
     const id = Date.now() + Math.random();
     const notification = { id, message, type, duration };
@@ -18,11 +22,7 @@ export const useNotifications = () => {
     }
 
     return id;
-  }, []);
-
-  const removeNotification = useCallback((id) => {
-    setNotifications(prev => prev.filter(n => n.id !== id));
-  }, []);
+  }, [removeNotification]);
 
   const clearAll = useCallback(() => {
     setNotifications([]);

@@ -82,7 +82,7 @@ const filterGoals = (goals, filter) => {
 };
 
 // Sort functions
-export const sortItems = (items, sortOption, itemType) => {
+export const sortItems = (items, sortOption) => {
   const [field, direction] = sortOption.split('-');
   const isAsc = direction === 'asc';
 
@@ -127,7 +127,7 @@ export const sortItems = (items, sortOption, itemType) => {
 };
 
 // Search function - enhanced to search across all fields
-export const searchItems = (items, query, itemType) => {
+export const searchItems = (items, query) => {
   if (!query.trim()) return items;
 
   const searchTerm = query.toLowerCase();

@@ -1,6 +1,6 @@
 # 📝 SJ Notes - Personal Productivity App
 
-> **Development Disclaimer**: This application was developed with assistance from AI (Kiro Assistant). The AI helped with code architecture, implementation, debugging, and documentation. While the core ideas, requirements, and testing were human-driven, significant portions of the codebase and documentation were generated or enhanced through AI collaboration.
+> **Development Disclaimer**: This application was developed with assistance from AI. The AI helped with code architecture, implementation, debugging, and documentation. While the core ideas, requirements, and testing were human-driven, significant portions of the codebase and documentation were generated or enhanced through AI collaboration.
 
 > **Version**: 1.1.0-beta | **Status**: Beta Testing Phase | **Build**: January 2026
 
